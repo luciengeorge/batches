@@ -1,1 +1,2 @@
-# lib/animal_spec.rb
+# lib/lion_spec.rb
+
