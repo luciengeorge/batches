@@ -11,3 +11,17 @@ WHERE username='lucien-george'
 
 ## GMAIL (Updating instead of deleting)
 UPDATE emails SET deleted=true
+
+# CRUD
+
+# CREATE
+INSERT INTO
+
+# READ
+SELECT
+
+# UPDATE
+UPDATE
+
+# DELETE
+DELETE
