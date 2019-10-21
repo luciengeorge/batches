@@ -22,18 +22,23 @@ class Cookbook
     return @recipes
   end
 
+  def update_marking(index)
+    @recipes[index].change_marking
+    save_to_csv
+  end
+
   private
 
   def load_csv
     CSV.foreach(@csv_file) do |row|
-      @recipes << Recipe.new(row[0], row[1])
+      @recipes << Recipe.new(row[0], row[1], row[2], row[3])
     end
   end
 
   def save_to_csv
     CSV.open(@csv_file, 'wb') do |csv|
       @recipes.each do |recipe|
-        csv << [recipe.name, recipe.description]
+        csv << [recipe.name, recipe.description, recipe.prep_time, recipe.done]
       end
     end
   end
