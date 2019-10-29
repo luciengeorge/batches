@@ -1,8 +1,6 @@
 # Q1 - What's a relational database?
 
-
 # Q2 - What are the different "table relationships" you know?
-
 
 # Q3 - Consider this e-library service. An author, defined by his name have several books.
 #      A book, defined by its title and publishing year, has one author only. What's this simple database scheme. Please draw it!
