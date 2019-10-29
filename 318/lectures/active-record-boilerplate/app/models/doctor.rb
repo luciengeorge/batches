@@ -2,7 +2,7 @@ class Doctor < ActiveRecord::Base
   has_many :interns # => house.interns
   has_many :consultations # => house.consultations
   has_many :patients, through: :consultations # => house.patients
-  validates :last_name, presence: true, uniqueness: true
+  validates :last_name, presence: true, uniqueness: true # => enforces the presence and the uniqueness of last_name
 end
 
 
