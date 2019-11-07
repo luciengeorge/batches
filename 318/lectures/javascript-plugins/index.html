@@ -3,11 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <title>OMDb API</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container text-center">
+      <select class="select2" name="country">
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+      </select>
+
+      <textarea class="form-control" id="editor" rows="4"></textarea>
+      <div id="preview"></div>
+
       <form class="form-inline" id="search-form">
         <input type="text" class="form-control" placeholder="Find movie" id="search-input">
         <input type="submit" class="btn btn-primary">
