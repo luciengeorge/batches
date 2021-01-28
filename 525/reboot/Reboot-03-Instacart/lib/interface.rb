@@ -1,6 +1,6 @@
-# TODO: you can build your instacart program here!
+# # TODO: you can build your instacart program here!
 
-############################### STEP 1 ###############################
+####################################### STEP 1 ########################################
 
 # Items are stored in a hash
 # Each key is the name of the item
@@ -50,9 +50,9 @@ end
 # Displaying the total amount
 puts "TOTAL: £#{balance}"
 
-######################################################################
+#######################################################################################
 
-############################### STEP 2 ###############################
+############################### STEP 2 (Cart as array) ################################
 
 # Items are stored in a hash
 # Each key is the name of the item
@@ -133,9 +133,92 @@ end
 # Displaying the total amount
 puts "TOTAL: £#{balance}"
 
-######################################################################
+#######################################################################################
 
-############################### STEP 3 ###############################
+################################ STEP 2 (Cart as hash) ################################
+
+# Items are stored in a hash
+# Each key is the name of the item
+# Each value is the price of the item
+items = {
+  'kiwi' => 1.25,
+  'banana' => 0.5,
+  'mango' => 4,
+  'asparagus' => 9
+}
+
+# All the user choices will pushed into a hash
+# We initialize our cart as an empty hash
+cart = {}
+
+# Greeting the user
+puts "------------------------"
+puts "Welcome to Le Wagon Shop"
+puts "------------------------"
+
+# Displaying the items in our store with their prices
+puts "Here are the items in our store:"
+
+# Iterating over the hash and display each item with their price
+items.each do |item, price| # item represents each key, price represents each value
+  puts "#{item}: £#{price}"
+end
+puts "--------------------------------"
+
+# Looping until the user wants to quit
+loop do
+  # Ask the user what item they want and store it in the variable user_choice
+  puts "Which item (or 'quit' to checkout)"
+  user_choice = gets.chomp
+
+  # If the user enters quit, we break out of the loop
+  break if user_choice == 'quit'
+
+  # Checking if the item chosen by the user is in our store
+  if items.key?(user_choice)
+    # if it is, we ask the user how many of that item do they want and store it in the variable quantity
+    puts "How many #{user_choice} do you want?"
+    quantity = gets.chomp.to_i
+
+    # check if the user already added that item in their cart
+    if cart[user_choice]
+      # if they did then increment by the quantity
+      cart[user_choice] += quantity
+    else
+      # if not just create a new key/value pair with the item and the wanted quantity
+      cart[user_choice] = quantity
+    end
+  else
+    # else show an error message
+    puts "Sorry we don't have any #{user_choice} today"
+  end
+end
+
+# Initialize our balance to 0
+balance = 0
+
+# Iterate over our cart to display each selected item with their price and wanted quantity
+cart.each do |item, quantity|
+  # Getting the name of the item
+  item_name = item
+  # Getting the quantity of the item
+  item_quantity = quantity
+  # Getting the price of the item
+  item_price = items[item_name]
+  # Calculating the total price
+  item_total_price = item_quantity * item_price
+  # Incrementing the balance by the item's total price
+  balance += item_total_price
+  # Displaying the item, price, quantity and total price to the user
+  puts "#{item_name}: £#{item_price} x #{item_quantity} = £#{item_total_price}"
+end
+
+# Displaying the total amount
+puts "TOTAL: £#{balance}"
+
+#######################################################################################
+
+####################################### STEP 3 ########################################
 
 # Items are stored in a hash
 # Each key is the name of the item
@@ -234,4 +317,4 @@ end
 # Displaying the total amount
 puts "TOTAL: £#{balance}"
 
-######################################################################
+#######################################################################################
