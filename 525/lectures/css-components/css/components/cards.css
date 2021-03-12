@@ -1,0 +1,65 @@
+/* category */
+.card-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* product */
+.card-product {
+  display: flex;
+  background: white;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.card-product img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 16px;
+  border-radius: 8px 0 0 8px;
+}
+
+.card-product h2 {
+  margin: 0;
+}
+
+.card-product p {
+  margin: 0;
+}
+
+/* trip */
+.card-trip {
+  border-radius: 8px;
+  background: white;
+}
+
+.card-trip img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-trip-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 16px;
+}
+
+.card-trip h2 {
+  margin: 0;
+}
+
+.card-trip p {
+  margin: 0;
+}
