@@ -50,9 +50,9 @@ class Cookbook
       @recipes << recipe
     end
   end
+
   # one method to store my date into the CSV
   ## From my Ruby memory => CSV file
-
   def store_data_to_csv
     CSV.open(@csv_file, 'wb') do |csv|
       @recipes.each do |recipe|

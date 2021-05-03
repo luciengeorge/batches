@@ -24,12 +24,13 @@ class ScraperService
       rating = element.search('.review-star-text').text.strip.split[1].to_f # get us float numbers
       ## Or grab the rating by counting the number of html elements that have both .rating-star and .active classes:
       # rating = element.search('.rating-star.active').size # get us round numbers
-      # Find the url to the recipe's page
+      # 8. Find the url to the recipe's page
       recipe_url = element.search('.card__titleLink').attr('href')
+      # 9. parse the recipe's HTML page
       recipe_doc = Nokogiri::HTML(URI.open(recipe_url).read, nil, 'utf-8')
+      # 10. find the prep_time on the page (it's possible you came up with a different solution)
       prep_time = recipe_doc.search('.recipe-meta-item-body').first.text.strip
-      # recipe name, description in the initialize method
-      # 8. build a recipe instance
+      # 11. build a recipe instance
       Recipe.new(title, description, rating, prep_time)
     end
   end
