@@ -14,17 +14,18 @@ const moveTile = (event) => {
     emptyTile.innerText = tile.innerText;
     tile.innerText = '';
   }
-  const tiles = Array.from(document.querySelectorAll('td')).map(tile => parseInt(tile.innerText));
-  const orderedTiles = tiles.slice().sort((a, b) => {
-    if (isNaN(a)) {
-      return 1;
-    }
-    if (isNaN(b)) {
-      return -1;
-    }
-    return a - b;
-  });
-  if(tiles.join() === orderedTiles.join()) {
+  const tiles = Array.from(document.querySelectorAll('td')).map(tile => tile.innerText);
+  // const orderedTiles = tiles.slice().sort((a, b) => {
+  //   if (isNaN(a)) {
+  //     return 1;
+  //   }
+  //   if (isNaN(b)) {
+  //     return -1;
+  //   }
+  //   return a - b;
+  // });
+  // if(tiles.join() == orderedTiles.join()) {
+  if(tiles.join(',') == '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,') {
     alert('You win!')
     window.location.reload();
   }
