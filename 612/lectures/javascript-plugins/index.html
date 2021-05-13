@@ -5,10 +5,23 @@
     <title>Playground - JavaScript 101</title>
     <link rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/select2/dist/css/select2.css">
   </head>
   <body>
     <!-- Add some HTML in here -->
     <div class="container text-center">
+      <select class="select2" name="country">
+        <option value="united-kingdom">United Kingdom</option>
+        <option value="united-states">United States</option>
+        <option value="france">France</option>
+        <option value="sweden">Sweden</option>
+        <option value="germany">Germany</option>
+        <option value="canada">Canada</option>
+        <option value="australia">Australia</option>
+      </select>
+      <textarea class="form-control" id="editor" rows="4"></textarea>
+      <div id="preview" class="mb-5"></div>
       <form id="search-form">
         <input type="text" placeholder="search for a movie..." id="search-input">
         <input type="submit" value="Search">
