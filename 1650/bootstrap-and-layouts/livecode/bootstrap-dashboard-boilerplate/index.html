@@ -1,17 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap Dashboard</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <!-- TODO: Code your dashboard here -->
+    <div class="bg-light py-1 navbar">
+      <div class="d-flex justify-content-between align-items-center container">
+        <a href="#" class="text-primary fs-3 text-decoration-none"
+          >Le Wagon Airbnb</a
+        >
+        <form action="" class="d-flex gap-2">
+          <input type="text" placeholder="Search" class="form-control" />
+          <input type="submit" class="btn btn-outline-success" />
+        </form>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div
+        class="sidenav padding-top shadow bg-light vh-100 px-2 d-flex flex-column justify-content-between"
+      >
+        <div>
+          <div class="d-flex align-items-center gap-2 border-bottom pb-3 mb-3">
+            <img
+              src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"
+              alt="logo"
+              width="50px"
+            />
+            <h1 class="fs-2 fw-normal">Le Wagon 👋</h1>
+          </div>
+          <div>
+            <a
+              href="#"
+              class="btn btn-primary w-100 text-start mb-2 d-flex gap-2 align-items-center"
+              ><i class="fa-solid fa-chart-simple"></i>Overview</a
+            >
+            <a
+              href="#"
+              class="btn btn-light w-100 text-start mb-2 d-flex gap-2 align-items-center"
+              ><i class="fa-solid fa-house"></i> My Flats</a
+            >
+            <a
+              href="#"
+              class="btn btn-light w-100 text-start mb-2 d-flex gap-2 align-items-center"
+              ><i class="fa-solid fa-book"></i>My Bookings</a
+            >
+          </div>
+        </div>
+        <div class="py-3 d-flex align-items-center gap-2 border-top">
+          <img
+            src="https://kitt.lewagon.com/placeholder/users/sarahlafer"
+            alt="Sarah"
+            class="rounded-circle"
+            width="50px"
+            height="50px"
+          />
+          <div class="dropdown">
+            <button
+              class="btn btn-light dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sarah
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="padding-top p-5 flex-grow-1">
+        <div class="alert alert-primary w-100 mt-5" role="alert">
+          A simple primary alert—check it out!
+        </div>
+        <h2 class="fs-1">Bookings</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="fs-1">Flats</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
