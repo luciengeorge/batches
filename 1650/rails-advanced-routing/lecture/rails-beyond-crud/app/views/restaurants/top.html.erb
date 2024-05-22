@@ -1,0 +1,7 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Top Restaurants</h1>
+
+<%= render('restaurants/list', {restaurants: @restaurants}) %>
+<%#= render 'restaurants/list', restaurants: @restaurants %>
+<%= link_to 'Back to all restaurants', restaurants_path %>
