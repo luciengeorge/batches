@@ -5,7 +5,7 @@
 class Car
   # YAGNI => You ain't gonna need it
   attr_reader :brand
-  # attr_accessor :color # reader and a writer for color
+  attr_accessor :color # reader and a writer for color
 
   def initialize(color, brand)
     # instance variable
@@ -30,7 +30,6 @@ class Car
 
   private
 
-  attr_accessor :color
   def system_checkup
     puts "Checking systems..."
   end
